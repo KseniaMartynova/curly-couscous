@@ -1,11 +1,8 @@
 a=int(input())
+b=int(input())
 c=0
 maxi=0
-b=int(input())
 if a==0:
-    print(a)
-
-if b==0:
     print(b)
 if a>0 and b>0:
     for c in range(1,b+1):
@@ -13,6 +10,7 @@ if a>0 and b>0:
             if c>maxi:
                 maxi=c
 print(maxi)
+
 #Проверка
 g=a//maxi
 k=b//maxi
