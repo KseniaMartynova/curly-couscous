@@ -14,7 +14,7 @@ else:
 #проверка
 for n in range(2,a):
     if a%n==0:
-        print('Clognoe')
+        print('False')
         break
         
     
