@@ -22,8 +22,8 @@ if g>0 and k>0:
             if p>proverka:
                 proverka=p
     if proverka==1:
-        print('pravilno')
+        print('true')
     else:
-        print('nepravilno')
+        print('false')
                 
 
