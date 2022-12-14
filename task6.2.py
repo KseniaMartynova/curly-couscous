@@ -1,16 +1,27 @@
-a=int(input())
-b=int(input())
-x=0
-y=0
-def gcd(a,b):
-    if a==0:
-        return b,0,1
-    gdc,x1,y1=gcd(b%a,a)
-    x=y1-(b//a)*x1
-    y=x1
-    return gdc,x,y
-print(gcd(a,b))
-#chek
-q,w,e=gcd(a,b)
-if a*w+b*e==q:
-    print('TRue')
+a = int(input())
+b = int(input())
+c = 0
+maxi = 0
+if a == 0:
+    print(b)
+if a > 0 and b > 0:
+    for c in range(1, b + 1):
+        if a % c == 0 and b % c == 0:
+            if c > maxi:
+                maxi = c
+print(maxi)
+
+# Check
+g = a // maxi
+k = b // maxi
+p = 0
+check = 0
+if g > 0 and k > 0:
+    for p in range(1, k + 1):
+        if g % p == 0 and k % p == 0:
+            if p > check:
+                check = p
+    if check == 1:
+        print('true')
+    else:
+        print('false')
