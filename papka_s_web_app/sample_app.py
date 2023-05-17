@@ -23,11 +23,6 @@ def root():
         'index.html'
     )
 
-@app.route('/fatcot')
-def fatcot():
-    return flask.render_template(
-        'fatcot.html'
-    )
 
 
 @app.route('/supr', methods = ['GET', 'POST'])
