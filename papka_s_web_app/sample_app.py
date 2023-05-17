@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# A very simple Flask Hello World app for you to get started with...
-
 import flask
 from flask import Flask, request
 
@@ -25,8 +23,14 @@ def root():
         'index.html'
     )
 
+@app.route('/fatcot')
+def fatcot():
+    return flask.render_template(
+        'fatcot.html'
+    )
 
-@app.route('/game', methods = ['GET', 'POST'])
+
+@app.route('/supr', methods = ['GET', 'POST'])
 def hello_name():
     if request.method == 'GET':
         name_param=request.args.get('name')
